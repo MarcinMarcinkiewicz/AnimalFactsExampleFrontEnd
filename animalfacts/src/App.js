@@ -1,24 +1,14 @@
-import NavBar from './Components/NavBar'
-import { createTheme, ThemeProvider} from '@mui/material/styles'
+import { Link } from "react-router-dom";
 
 //Colour palate = turquois: #40E0D0, medium aquamarine: #68E7B0, light green: #90EE90, Cedar Chest: #DB504A
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#68E7B0'
-    }
-  }
-})
-
 function App() {
   return (
-    <ThemeProvider theme={theme}>
       <div className="App">
-        <NavBar/>
-        <h1>Hello World</h1>
+        <h1>Welcome to your new home</h1>
+        <Link to="/support">Support</Link> |{" "}
+        <Link to="/aboutUs">About us</Link>
       </div>
-    </ThemeProvider>
   );
 }
 
